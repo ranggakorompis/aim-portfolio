@@ -17,6 +17,220 @@ body {
   font-family: "Roboto", sans-serif;
 }
 
-h1 {
+.title {
   font-weight: 500;
+  font-size: 2rem;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.tagline {
+  font-weight: 500;
+  font-size: 1.3rem;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+a:link {
+  text-decoration: none;
+}
+
+/* navbar */
+#navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: var(--basic-color);
+  text-transform: uppercase;
+  height: 50px;
+}
+
+/* logo */
+#navbar i {
+  font-size: 25px;
+  color: white;
+}
+
+/* nav links */
+.nav-link {
+  color: white;
+  font-size: 1.3rem;
+  margin-left: 20px;
+}
+
+/* welcome section */
+#welcome-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+}
+
+/* hero image */
+.image {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  margin-top: 90px;
+  border: 7px solid var(--basic-color);
+}
+
+/* title wrap */
+.title-wrap {
+  color: var(--font-color);
+  margin-top: 25px;
+}
+
+.title-wrap .tagline {
+  margin-top: 10px;
+}
+
+/* sosmed links */
+.sosmed-links {
+  list-style: none;
+  display: flex;
+  margin-top: 20px;
+}
+
+.sosmed-links li {
+  width: 50px;
+  height: 50px;
+  background: var(--basic-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+}
+
+.sosmed-links li:nth-child(2) {
+  margin: 0 10px;
+}
+
+.sosmed-links i {
+  font-size: 30px;
+  color: white;
+}
+
+/* projects section */
+#projects {
+  background: var(--basic-color);
+  padding-top: 50px;
+}
+
+#projects .title {
+  text-align: center;
+  padding-bottom: 20px;
+  color: white;
+}
+
+/* projects box */
+.projects-tile-box {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 10px 20px;
+}
+
+.project-tile img {
+  width: 100%;
+  padding: 5px;
+}
+
+/* project link */
+.project-link {
+  margin: 20px 0;
+  padding: 10px;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: var(--basic-color);
+  background: white;
+}
+
+/* contact */
+#contact {
+  padding-top: 50px;
+  color: var(--basic-color);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#contact .tagline {
+  text-transform: lowercase;
+  font-style: italic;
+}
+
+/* profile links */
+#profile-links {
+  text-align: center;
+  margin: auto;
+  padding: 25px;
+}
+
+#profile-link {
+  font-size: 25px;
+  color: var(--basic-color);
+}
+
+#profile-links a:nth-child(2) {
+  margin: 0 10px;
+}
+
+/* Responsive Breakpoint */
+/* small devices (phone) */
+@media screen and (min-width: 575px) {
+  /* projects box */
+  .project-tile {
+    max-width: 50%;
+  }
+}
+
+/* medium devices (tablets) */
+@media screen and (max-width: 767px) {
+  /* navbar */
+  .nav-links {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 60%;
+    height: 100vh;
+    background-color: var(--basic-color);
+    list-style: none;
+    transform: translateX(100%);
+    transition: 0.5s;
+  }
+
+  .nav-link {
+    margin-top: 10px;
+  }
+
+  .toggle {
+    transform: translateX(0%);
+  }
+
+  .humburger-menu {
+    z-index: 1;
+  }
+}
+
+/* medium devices (tablets) */
+@media screen and (min-width: 767px) {
+  /* navbar */
+  .humburger-menu {
+    display: none;
+  }
+
+  /* projects box */
+  .project-tile {
+    max-width: 25%;
+  }
 }
